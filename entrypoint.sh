@@ -24,7 +24,7 @@ BUILD_LOG="${BUILD_LOG:-1}"
 
 if [ -n "$KEY_BUILD" ]; then
 	echo "$KEY_BUILD" > key-build
-	SIGNED_PACKAGES="y"
+	SIGNED_PACKAGES="n"
 fi
 
 if [ -z "$NO_DEFAULT_FEEDS" ]; then
