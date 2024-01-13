@@ -175,6 +175,8 @@ else
 fi
 
 if [ "$INDEX" = '1' ];then
+	group "Creating Local Build Key"
+	./staging_dir/host/bin/usign -G -s ./key-build -p ./key-build.pub -c "Local build key nosign"
 	group "make package/index"
 	make package/index V=$V
 fi
