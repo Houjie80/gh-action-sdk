@@ -176,8 +176,7 @@ fi
 
 if [ "$INDEX" = '1' ];then
 	group "make package/index"
-	make package/index
-	endgroup
+	make package/index V=$V
 fi
 
 if [ -d bin/ ]; then
