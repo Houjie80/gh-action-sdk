@@ -55,7 +55,8 @@ endgroup
 group "make defconfig"
 make defconfig
 echo "removing BAKA packages"
-apt remove csstidy -y
+sudo apt remove csstidy -y
+rm -rf feeds/luci/contrib/package/csstidy
 sed -i '/^CONFIG_LUCI_JSMIN=/d' .config
 sed -i '/^CONFIG_LUCI_CSSTIDY=/d' .config
 endgroup
