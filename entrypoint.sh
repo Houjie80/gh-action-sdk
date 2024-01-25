@@ -49,6 +49,9 @@ cat feeds.conf
 endgroup
 
 group "feeds update -a"
+echo "removing BAKA packages"
+sed -i '/^config LUCI_CSSTIDY/,/^$/d' Config-build.in
+sed -i '/^config LUCI_JSMIN/,/^$/d' Config-build.in
 ./scripts/feeds update -a
 endgroup
 
