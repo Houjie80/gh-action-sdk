@@ -49,14 +49,14 @@ cat feeds.conf
 endgroup
 
 group "feeds update -a"
-echo "removing BAKA packages"
-sed -i '/^config LUCI_CSSTIDY/,/^$/d' Config-build.in
-sed -i '/^config LUCI_JSMIN/,/^$/d' Config-build.in
 ./scripts/feeds update -a
 endgroup
 
 group "make defconfig"
 make defconfig
+echo "removing BAKA packages"
+sed -i '/^CONFIG_LUCI_JSMIN=/d' .config
+sed -i '/^CONFIG_LUCI_CSSTIDY=/d' .config
 endgroup
 
 if [ -z "$PACKAGES" ]; then
