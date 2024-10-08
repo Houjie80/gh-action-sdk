@@ -47,10 +47,10 @@ jobs:
         run: |
               echo ""
               # git clone ( repo yaang ingin dibuild )
-              git clone https://github.com/Houjie80/luci-app-ramfree
+              git clone https://github.com/Houjie80/OpenClash/tree/dev/luci-app-openclash
               mkdir feeds artifacts
               #cp -rf ./( nama ipk ) ./feeds
-              cp -rf ./luci-app-ramfree ./feeds
+              cp -rf ./luci-app-openclash ./feeds
               
         
       - name: Building luci-app-neko
@@ -60,7 +60,7 @@ jobs:
           ARTIFACTS_DIR: ${{ github.workspace }}/artifacts
           FEED_DIR: ${{ github.workspace }}/feeds
           #PACKAGES: ( nama ipk )
-          PACKAGES: luci-app-ramfree
+          PACKAGES: luci-app-openclash
           NO_SHFMT_CHECK: 1
         
       - name: Delivering Package
