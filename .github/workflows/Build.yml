@@ -47,10 +47,10 @@ jobs:
         run: |
               echo ""
               # git clone ( repo yaang ingin dibuild )
-              git clone https://github.com/Houjie80/OpenClash/tree/dev/luci-app-openclash
+              git clone https://github.com/Houjie80/OpenClash
               mkdir feeds artifacts
               #cp -rf ./( nama ipk ) ./feeds
-              cp -rf ./luci-app-openclash ./feeds
+              cp -rf ./OpenClash/luci-app-openclash ./feeds
               
         
       - name: Building luci-app-neko
